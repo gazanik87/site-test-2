@@ -1,0 +1,522 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  padding-bottom: 15px;
+  background-color: #232f3e;
+}
+header .chevron {
+  position: absolute;
+  top: 0;
+  right: -20px;
+  height: 11px;
+}
+header li {
+  list-style: none;
+  color: white;
+}
+header li:hover {
+  color: #ff3c20;
+}
+header a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+header a:hover .hidden {
+  pointer-events: all;
+  opacity: 1;
+}
+header a:hover {
+  color: #ff3c20;
+}
+header .hidden {
+  z-index: 2;
+  position: absolute;
+  background-color: white;
+  color: black !important;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+header .hidden li {
+  color: black;
+  font-size: 14px;
+  font-weight: 200;
+  padding: 0 16px;
+}
+header .hidden li a {
+  color: black;
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#headofheader {
+  display: flex;
+  height: 40px;
+  border-bottom: 1px solid rgb(97, 94, 94);
+}
+
+#rotatemenu {
+  width: 70%;
+  height: 40px;
+  overflow: hidden;
+}
+#rotatemenu div {
+  font-size: 12px;
+  padding: 10px;
+  width: 100%;
+  height: 40px;
+}
+
+#headofheadermenubox {
+  width: 30%;
+}
+
+#headofheadermenu {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+#headofheadermenu li {
+  font-size: 12px;
+  padding: 10px;
+}
+#headofheadermenu li a {
+  font-size: 12px;
+}
+#headofheadermenu li .lighn {
+  position: relative;
+}
+#headofheadermenu li .lighn::before {
+  width: 1px;
+  height: 14px;
+  position: absolute;
+  left: -7px;
+  content: "";
+  border-left: 1px solid darkgrey;
+}
+#headofheadermenu li .lighn::after {
+  position: absolute;
+  right: -12px;
+  top: 4px;
+  content: "";
+  border: 4px solid;
+  border-color: white #232f3e #232f3e #232f3e;
+}
+#headofheadermenu li .lighn:hover .hidden {
+  display: none;
+}
+#headofheadermenu li .lighn:hover::after {
+  border-color: #ff3c20 #232f3e #232f3e #232f3e;
+}
+
+.containerbox {
+  margin: auto;
+  justify-content: space-between;
+  display: flex;
+  width: 93%;
+}
+
+#centreofheader {
+  display: flex;
+}
+#centreofheader .hidden {
+  top: 16px;
+}
+#centreofheader div {
+  padding: 15px;
+}
+#centreofheader .chevron {
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+  background-image: url(./img/down\ white.png);
+  background-size: 100% 100%;
+}
+#centreofheader .chevron:hover {
+  background-image: url(./img/down\ red.png);
+}
+
+#headlogo {
+  max-width: 215px;
+}
+
+#centrebox {
+  display: flex;
+}
+
+#horizontalmenubox {
+  display: flex;
+}
+
+#horizontalmenu {
+  display: flex;
+  justify-content: space-around;
+}
+#horizontalmenu > li {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 16px;
+}
+#horizontalmenu > li > a {
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+}
+#horizontalmenu #pages {
+  width: 250px;
+  margin: 0;
+  padding: 0;
+}
+#horizontalmenu #pages li {
+  padding: 10px;
+  font-weight: 400;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 25px;
+}
+#horizontalmenu #pages li:hover {
+  color: #ff3c20 !important;
+}
+
+#signinmenu {
+  font-size: 14px;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 15px;
+}
+#signinmenu li {
+  display: flex;
+}
+#signinmenu a {
+  margin-left: 5px;
+  display: flex;
+}
+#signinmenu a img {
+  width: 9px;
+}
+#signinmenu span {
+  display: flex;
+  margin-left: 5px;
+}
+#signinmenu span img {
+  width: 12px;
+}
+
+#searchbox {
+  display: flex;
+  width: 650px !important;
+}
+
+#quicksearch {
+  width: 70px !important;
+  height: 40px !important;
+  background-color: red;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+#quicksearch img {
+  width: 20px !important;
+  height: 20px !important;
+  margin: 10px 25px;
+  padding: 0;
+}
+#quicksearch:hover {
+  background-color: black;
+}
+
+#search {
+  padding: 10.5px 14px 10.5px 20px;
+  width: 580px;
+  border-radius: 5px 0 0 5px;
+}
+
+#headericons {
+  width: 25%;
+  display: flex;
+  justify-content: right;
+}
+#headericons > div {
+  width: 40px;
+  margin: 0 15px;
+}
+#headericons > div img {
+  width: 100%;
+}
+#headericons #bag {
+  position: relative;
+  border-radius: 50%;
+  background-color: #ff3c20;
+}
+#headericons #bag img {
+  width: 20px !important;
+  height: 20px !important;
+  margin: 10px;
+}
+#headericons #bag div {
+  padding: 4px;
+  text-align: center;
+  width: 22px;
+  height: 22px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #fff;
+  color: #000;
+}
+
+#gift {
+  margin-right: 5px;
+  width: 14px;
+  height: 14px;
+  background-image: url(./img/gift\ white.png);
+  background-size: 100% 100%;
+}
+
+#giftbox {
+  display: flex;
+}
+#giftbox:hover #gift {
+  background-image: url(./img/gift\ red.png);
+}
+
+#userimg {
+  margin-right: 5px;
+  width: 14px;
+  height: 14px;
+  background-image: url(./img/user\ white.png);
+  background-size: 100% 100%;
+}
+
+#user {
+  position: relative;
+  display: flex;
+}
+#user:hover #userimg {
+  background-image: url(./img/user\ red.png);
+}
+
+#layoutbox {
+  display: flex;
+  position: relative;
+}
+#layoutbox #hot {
+  background-color: #5bc0de;
+  position: absolute;
+  font-size: 10px;
+  top: -25px;
+  left: 40px;
+  margin: 0;
+  padding: 4px 6px;
+}
+#layoutbox #hot::after {
+  position: absolute;
+  left: 10px;
+  bottom: -8px;
+  content: "";
+  border: 4px solid;
+  border-color: #5bc0de #232f3e #232f3e #232f3e;
+}
+#layoutbox #layout {
+  display: flex;
+}
+
+#featuresbox {
+  position: relative;
+}
+#featuresbox #features {
+  display: flex;
+  left: -150%;
+  z-index: 2;
+  width: 600px;
+  background-color: white;
+  color: black !important;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  font-weight: 200 !important;
+  text-align: left !important;
+}
+#featuresbox #features > ul {
+  display: flex !important;
+}
+#featuresbox #features .fvern {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+}
+#featuresbox #features a {
+  position: relative;
+  color: black;
+}
+#featuresbox #features a:hover {
+  cursor: pointer;
+  color: #ff3c20;
+}
+#featuresbox #features li {
+  width: 150px;
+  padding: 10px 4px;
+  color: black;
+}
+#featuresbox #features li:hover {
+  cursor: pointer;
+  color: #ff3c20;
+}
+#featuresbox #features .hidden {
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 25px;
+  top: -10px;
+  left: 110px;
+  background-color: white;
+}
+#featuresbox #features .hidden::before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  border: 7px solid;
+  border-color: transparent white transparent transparent;
+  left: -4px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 25px;
+}
+#featuresbox:hover #features {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#bottomofheader {
+  height: 40px;
+}
+#bottomofheader li {
+  color: black;
+}
+#bottomofheader .containerbox {
+  height: 40px;
+}
+#bottomofheader a {
+  color: black;
+}
+#bottomofheader #verticalmenu {
+  z-index: 3;
+  width: 250px;
+  position: relative;
+  height: 40px;
+}
+#bottomofheader #verticalmenu #allcategories {
+  display: flex;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 10px;
+  width: 250px;
+  height: 40px;
+  border-radius: 4px 4px 0 0;
+  background-color: #ff3c20;
+  color: white;
+}
+#bottomofheader #verticalmenu #allcategories img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+#bottomofheader #verticalmenu #cepleft {
+  position: absolute;
+  left: 5px;
+  top: 33px;
+}
+#bottomofheader #verticalmenu #cepright {
+  position: absolute;
+  right: 5px;
+  top: 33px;
+}
+#bottomofheader #verticalmenu .chevron {
+  top: 10px;
+  right: 25px;
+}
+#bottomofheader #verticalmenu > div {
+  cursor: pointer;
+  width: 100%;
+  position: absolute;
+  top: 55px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 25px;
+}
+#bottomofheader #verticalmenu > div .menuimg {
+  width: 16px;
+  margin-right: 4px;
+}
+#bottomofheader #verticalmenu > div li {
+  position: relative;
+  width: 250px;
+  height: 35px;
+  padding: 4px;
+  color: #666 !important;
+  font-size: 14px !important;
+  font-weight: 400;
+}
+#bottomofheader #verticalmenu > div li a {
+  position: static !important;
+  color: #666 !important;
+}
+#bottomofheader #verticalmenu > div li:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 25px;
+}
+#bottomofheader #verticalmenu > div li:hover > .verticalsub {
+  opacity: 1;
+  pointer-events: all;
+}
+#bottomofheader #verticalmenu > div .verticalsub {
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 25px;
+  position: absolute;
+  top: 0;
+  left: 250px !important;
+  background-color: white;
+  left: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+#bottomofheader #verticalmenu > div .verticalsub::before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  border: 7px solid;
+  border-color: transparent white transparent transparent;
+  left: -4px;
+}
+
+#fashion {
+  width: 750px !important;
+  height: 400px !important;
+  z-index: 3;
+}
+#fashion > ul {
+  display: flex;
+  width: 100%;
+}
+#fashion > ul > li {
+  width: 200px !important;
+}
+#fashion > ul #destination {
+  width: 150px !important;
+}
+#fashion > ul #destination img {
+  width: 100%;
+}
+
+#deals {
+  width: 750px !important;
+  height: 400px !important;
+}
+#deals > ul {
+  display: flex;
+  width: 100% !important;
+  height: 250px !important;
+}
+#deals > ul li {
+  width: 250px !important;
+}
+#deals img {
+  width: 100% !important;
+}/*# sourceMappingURL=style.css.map */
